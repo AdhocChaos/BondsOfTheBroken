@@ -52,26 +52,28 @@
 
     .main {
       flex: 1;
-      display: flex;
-      flex-direction: row;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2em;
       padding: 2em;
     }
 
     .content {
-      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
     }
 
     .sidebar-right {
-      flex: 1;
-      padding-left: 2em;
       border-left: 1px solid #b6e5ed;
+      padding-left: 2em;
     }
 
     .card {
       display: flex;
       align-items: center;
-      margin: 2em 0;
-      background: #a1d0fc;
+      background-color: #a1d0fc;
+      padding: 1em;
     }
 
     .card:nth-child(even) {
@@ -103,6 +105,7 @@
       }
 
       .main {
+        display: flex;
         flex-direction: column;
       }
 
@@ -149,7 +152,7 @@
     <div class="main">
       <div class="content">
         <div class="card">
-          <img src="Morana.png" alt="Placeholder">
+          <img src="Morana.png" alt="Morana">
           <div class="card-text">
             <h1>Morana Kenovar</h1>
             <p>Here is a synopsis of Morana</p>
@@ -157,7 +160,7 @@
         </div>
 
         <div class="card">
-          <img src="Emrys.png" alt="Placeholder">
+          <img src="Emrys.png" alt="Emrys">
           <div class="card-text">
             <h1>Emrys</h1>
             <p>Here is Emrys my boi</p>
@@ -165,7 +168,7 @@
         </div>
 
         <div class="card">
-          <img src="Aspen.png" alt="Placeholder">
+          <img src="Aspen.png" alt="Aspen">
           <div class="card-text">
             <h1>Aspen</h1>
             <p>Picture text text text</p>
@@ -173,7 +176,7 @@
         </div>
 
         <div class="card">
-          <img src="Auggie.png" alt="Placeholder">
+          <img src="Auggie.png" alt="Auggie">
           <div class="card-text">
             <h1>Auggie</h1>
             <p>text text text Picture</p>
@@ -181,16 +184,15 @@
         </div>
 
         <div class="card">
-          <img src="Hazel.png" alt="Placeholder">
+          <img src="Hazel.png" alt="Hazel">
           <div class="card-text">
             <h1>Hazel</h1>
             <p>Picture text text text</p>
           </div>
         </div>
-      </div>
 
         <div class="card">
-          <img src="Nyala.png" alt="Placeholder">
+          <img src="Nyala.png" alt="Nyala">
           <div class="card-text">
             <h1>Nyala</h1>
             <p>text text text Picture</p>
@@ -198,17 +200,15 @@
         </div>
 
         <div class="card">
-          <img src="Nevaeh.png" alt="Placeholder">
+          <img src="Nevaeh.png" alt="Nevaeh">
           <div class="card-text">
             <h1>Nevaeh</h1>
             <p>Picture text text text</p>
           </div>
         </div>
-      </div>
-
 
         <div class="card">
-          <img src="Jaythan.png" alt="Placeholder">
+          <img src="Jaythan.png" alt="Jaythan">
           <div class="card-text">
             <h1>Jaythan</h1>
             <p>text text text Picture</p>
@@ -216,7 +216,7 @@
         </div>
 
         <div class="card">
-          <img src="Fynn.png" alt="Placeholder">
+          <img src="Fynn.png" alt="Fynn">
           <div class="card-text">
             <h1>Fynn</h1>
             <p>Picture text text text</p>
@@ -224,7 +224,6 @@
         </div>
       </div>
 
-      
       <div class="sidebar-right">
         <h3>Additional Info</h3>
         <p>This area can contain vertically stacked text, updates, or any supplementary content.</p>
