@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOTB</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      font-size: 2em;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 1em;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+    }
+
+    nav button {
+      background-color: #555;
+      color: white;
+      border: none;
+      padding: 0.75em;
+      margin: 0.25em 0;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      display: none;
+      background-color: #444;
+      padding: 1em;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      padding: 2em;
+    }
+
+    .content {
+      flex: 2;
+    }
+
+    .sidebar-right {
+      flex: 1;
+      padding-left: 2em;
+      border-left: 1px solid #ccc;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      margin: 2em 0;
+    }
+
+    .card:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin: 0 1em;
+    }
+
+    .card-text {
+      flex: 1;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .dropdown {
+        display: block;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .main {
+        flex-direction: column;
+      }
+
+      .sidebar-right {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 2em;
+      }
+
+      .card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .card:nth-child(even) {
+        flex-direction: column;
+      }
+
+      .card img {
+        margin: 1em auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>BOTB</header>
+
+  <div class="dropdown">
+    <select onchange="location = this.value;">
+      <option value="#">Navigate...</option>
+      <option value="page1.html">Name 1</option>
+      <option value="page2.html">Name 2</option>
+      <option value="page3.html">Name 3</option>
+    </select>
+  </div>
+
+  <div class="container">
+    <nav>
+      <button onclick="location.href='page1.html'">Name 1</button>
+      <button onclick="location.href='page2.html'">Name 2</button>
+      <button onclick="location.href='page3.html'">Name 3</button>
+    </nav>
+
+    <div class="main">
+      <div class="content">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Placeholder">
+          <div class="card-text">
+            <p>Picture text text text</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Placeholder">
+          <div class="card-text">
+            <p>text text text Picture</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Placeholder">
+          <div class="card-text">
+            <p>Picture text text text</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Placeholder">
+          <div class="card-text">
+            <p>text text text Picture</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Placeholder">
+          <div class="card-text">
+            <p>Picture text text text</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-right">
+        <h3>Additional Info</h3>
+        <p>This area can contain vertically stacked text, updates, or any supplementary content.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
